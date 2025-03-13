@@ -1,7 +1,7 @@
 # native_tamper_detector
 
-A new Flutter project.
-
+See references in `android/app/src/main/kotlin`<br/><br/>
+You  also use the package [flutter_tamper_detector](https://pub.dev/packages/flutter_tamper_detector) to control the status in your flutter app.
 ## Getting Started
 
 This project is a starting point for a Flutter application.

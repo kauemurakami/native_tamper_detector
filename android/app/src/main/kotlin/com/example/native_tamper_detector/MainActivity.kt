@@ -12,8 +12,8 @@ class MainActivity : FlutterActivity() {
         super.onCreate(savedInstanceState)
 
         if (RootChecker.isDeviceRooted() || HookDetector.check() || IsEmulator.check()) {
-            finish() // Fecha a atividade antes de encerrar o processo
-            exitProcess(0) // Encerra completamente o aplicativo
+            finish() // Closes the activity before terminating the process
+            exitProcess(0) // Completely shuts down the application
         }
     }
 }
