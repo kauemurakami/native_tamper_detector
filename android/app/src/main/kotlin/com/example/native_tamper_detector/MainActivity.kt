@@ -6,12 +6,15 @@ import kotlin.system.exitProcess
 import com.deebx.flutter_tamper_detector.RootChecker
 import com.deebx.flutter_tamper_detector.HookDetector
 import com.deebx.flutter_tamper_detector.IsEmulator
+import com.deebx.flutter_tamper_detector.IsDebug
 
 class MainActivity : FlutterActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if (RootChecker.isDeviceRooted() || HookDetector.check() || IsEmulator.check()) {
+        if (RootChecker.isDeviceRooted() || HookDetector.check() || IsEmulator.check() 
+        // ||IsDebug.check(this)
+         ) {
             finish() // Closes the activity before terminating the process
             exitProcess(0) // Completely shuts down the application
         }
