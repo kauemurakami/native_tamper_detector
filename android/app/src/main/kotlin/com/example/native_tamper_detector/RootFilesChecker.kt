@@ -5,7 +5,7 @@ import java.io.File
 object RootFilesChecker {
     fun checkSuFiles(): Boolean {
         val paths = arrayOf(
-            "/system/app/Superuser.apk",
+             "/system/app/Superuser.apk",
             "/system/xbin/su",
             "/system/bin/su",
             "/system/bin/.ext/.su",
@@ -18,7 +18,9 @@ object RootFilesChecker {
             "/data/local/bin/su",
             "/system/su",
             "/system/bin/magisk",
+            "/sbin/.magisk",
             "/sbin/magisk",
+            "/data/adb/magisk",
             "/data/local/tmp/magisk",
             "/system/bin/magiskhide",
             "/sbin/magiskhide",
