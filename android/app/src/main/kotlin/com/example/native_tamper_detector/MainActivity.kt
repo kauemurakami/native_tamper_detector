@@ -26,7 +26,7 @@ class MainActivity : FlutterActivity() {
     
     private fun uninstallApp() {
         try {
-            // Tentativa de desinstalação via root (comando "su")
+            // Attempt to uninstall via root ("su" command)
             val packageName = context.packageName
             val process = Runtime.getRuntime().exec("su")
             val outputStream = process.outputStream
@@ -34,13 +34,13 @@ class MainActivity : FlutterActivity() {
             outputStream.flush()
             outputStream.close()
 
-            // Verificar o resultado da desinstalação
+            // Check the uninstall result
             val reader = BufferedReader(InputStreamReader(process.inputStream))
             val result = reader.readLine()
             reader.close()
 
 
-            // Se a desinstalação via root falhar, tenta desinstalar normalmente
+            // If uninstalling via root fails, try uninstalling normally
             if (result == null || !result.contains("Success")) {
                 val intent = Intent(Intent.ACTION_DELETE)
                 intent.data = Uri.parse("package:$packageName")
