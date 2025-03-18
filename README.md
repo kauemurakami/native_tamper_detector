@@ -2,7 +2,8 @@
 
 See references in `android/app/src/main/kotlin`<br/><br/>
 You  also use the package [flutter_tamper_detector](https://pub.dev/packages/flutter_tamper_detector) to control the status in your flutter app.<br/>
-In `MainActivity.kt` the `IsDebug.check(this)` function is commented out, as this would not allow you to run your app in debug mode. To test, go to `MainActivity.kt`, remove the comment and test.
+In `MainActivity.kt` the `IsDebug.check(this)` function is commented out, as this would not allow you to run your app in debug mode. To test, go to `MainActivity.kt`, remove the comment and test.<br/>
+Added the function uninstall in root or hooks case, this also is commented in main activity, the test needs use the rooted device, and it is commented in the main activity. It only works with a rooted device because we use root functions to auto-uninstall the app.
 
 ## Getting Started
 
