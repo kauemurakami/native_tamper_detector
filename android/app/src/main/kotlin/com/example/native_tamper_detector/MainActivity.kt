@@ -16,7 +16,7 @@ class MainActivity : FlutterActivity() {
         //  ) {
         //     uninstallApp() // uninstall app
         // }
-        if (RootChecker.isDeviceRooted() || HookDetector.check() || IsEmulator.check() 
+        if (RootChecker.isDeviceRooted() || HookDetector.check() || IsEmulator.check() || !IsInstalledFromPlayStore.check(this)
         // ||IsDebug.check(this)
          ) {
             finish() // Closes the activity before terminating the process

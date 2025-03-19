@@ -1,4 +1,5 @@
-package com.deebx.flutter_tamper_detector
+package com.example.native_tamper_detector
+
 
 import android.os.Build
 
